@@ -7,7 +7,10 @@ const getTextColor = ({
   $isActive,
   disabled,
   theme,
-}: StyledDropdownMenuItemProps & { theme: DefaultTheme; $isActive: boolean }) => {
+}: StyledDropdownMenuItemProps & {
+  theme: DefaultTheme;
+  $isActive: boolean;
+}) => {
   if (disabled) return theme.colors.textDisabled;
   if ($isActive) return theme.colors.secondary;
 
@@ -59,7 +62,10 @@ export const DropdownMenuDivider = styled.hr`
   margin: 4px 0;
 `;
 
-export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: boolean }>`
+export const StyledDropdownMenu = styled.div<{
+  $isOpen: boolean;
+  $isBottomNav: boolean;
+}>`
   background-color: ${({ theme }) => theme.card.background};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: 16px;

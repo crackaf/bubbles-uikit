@@ -48,7 +48,7 @@ it("renders correctly", () => {
       >
         body
       </Menu>
-    </BrowserRouter>
+    </BrowserRouter>,
   );
 
   expect(asFragment()).toMatchSnapshot();

@@ -7,7 +7,9 @@ import { Box } from "../Box";
 import { MessageProps } from "./types";
 import variants from "./theme";
 
-const MessageContext = React.createContext<MessageProps>({ variant: "success" });
+const MessageContext = React.createContext<MessageProps>({
+  variant: "success",
+});
 
 const Icons = {
   warning: WarningIcon,

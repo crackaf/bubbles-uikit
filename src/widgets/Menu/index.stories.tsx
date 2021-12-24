@@ -36,11 +36,11 @@ const langs: Language[] = [...Array(20)].map((_, i) => ({
   locale: `Locale${i}`,
 }));
 
-const UserMenuComponent: React.FC<{ variant?: Variant; text?: string; account?: string }> = ({
-  variant = variants.DEFAULT,
-  text,
-  account = "0x8b017905DC96B38f817473dc885F84D4C76bC113",
-}) => {
+const UserMenuComponent: React.FC<{
+  variant?: Variant;
+  text?: string;
+  account?: string;
+}> = ({ variant = variants.DEFAULT, text, account = "0x8b017905DC96B38f817473dc885F84D4C76bC113" }) => {
   const accountEllipsis = account ? `${account.substring(0, 2)}...${account.substring(account.length - 4)}` : null;
   return (
     <DropdownMenu items={userMenulinks} py="12px">

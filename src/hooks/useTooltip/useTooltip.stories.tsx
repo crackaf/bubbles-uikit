@@ -54,7 +54,9 @@ export const Placement: React.FC = () => {
   const { targetRef: targetRefTopStart, tooltip: tooltipTopStart } = useTooltip("top-start", {
     placement: "top-start",
   });
-  const { targetRef: targetRefTop, tooltip: tooltipTop } = useTooltip("top", { placement: "top" });
+  const { targetRef: targetRefTop, tooltip: tooltipTop } = useTooltip("top", {
+    placement: "top",
+  });
   const { targetRef: targetRefTopEnd, tooltip: tooltipTopEnd } = useTooltip("top-end", {
     placement: "top-end",
   });
@@ -184,12 +186,18 @@ export const EventPropagationAndMobile: React.FC = () => {
     tooltipVisible: tooltipVisibleClick,
     targetRef: targetRefClick,
     tooltip: tooltipClick,
-  } = useTooltip("You clicked on the help icon but the card did not expand", { placement: "right", trigger: "click" });
+  } = useTooltip("You clicked on the help icon but the card did not expand", {
+    placement: "right",
+    trigger: "click",
+  });
   const {
     tooltipVisible: tooltipVisibleHover,
     targetRef: targetRefHover,
     tooltip: tooltipHover,
-  } = useTooltip("You hovered over the help icon", { placement: "right", trigger: "hover" });
+  } = useTooltip("You hovered over the help icon", {
+    placement: "right",
+    trigger: "hover",
+  });
   return (
     <div
       style={{
@@ -283,17 +291,26 @@ export const ScreenEdges: React.FC = () => {
     targetRef: targetRefLeft,
     tooltip: tooltipLeft,
     tooltipVisible: leftVisible,
-  } = useTooltip("I should not touch the edge of the screen", { placement: "top", trigger: "click" });
+  } = useTooltip("I should not touch the edge of the screen", {
+    placement: "top",
+    trigger: "click",
+  });
   const {
     targetRef: targetRefRight,
     tooltip: tooltipRight,
     tooltipVisible: rightVisible,
-  } = useTooltip("I should not touch the edge of the screen", { placement: "top", trigger: "click" });
+  } = useTooltip("I should not touch the edge of the screen", {
+    placement: "top",
+    trigger: "click",
+  });
   const {
     targetRef: targetRefMiddle,
     tooltip: tooltipMiddle,
     tooltipVisible: middleVisible,
-  } = useTooltip("I should not touch the edge of the screen", { placement: "top", trigger: "click" });
+  } = useTooltip("I should not touch the edge of the screen", {
+    placement: "top",
+    trigger: "click",
+  });
   return (
     <div style={{ padding: "16px", height: "800px", backgroundColor: "#EEE" }}>
       <Text>
@@ -301,7 +318,13 @@ export const ScreenEdges: React.FC = () => {
         edge. Open this screen on the phone or in browser with responsive mode. Tooltips should not touch the screen
         edge.
       </Text>
-      <div style={{ display: "flex", justifyContent: "space-between", padding: "24px" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "24px",
+        }}
+      >
         <span ref={targetRefLeft}>
           <HelpIcon />
         </span>
@@ -327,9 +350,18 @@ export const ThemeInversion: React.FC = () => {
       <BalanceInput value="1.0" currencyValue="~623.45 USD" placeholder="0.0" />
     </>
   );
-  const { targetRef, tooltip } = useTooltip(tooltipContent, { placement: "bottom" });
+  const { targetRef, tooltip } = useTooltip(tooltipContent, {
+    placement: "bottom",
+  });
   return (
-    <div style={{ padding: "60px 25px", width: "550px", display: "flex", gap: "15px" }}>
+    <div
+      style={{
+        padding: "60px 25px",
+        width: "550px",
+        display: "flex",
+        gap: "15px",
+      }}
+    >
       <div style={{ flex: "1" }}>
         <Text>Current theme looks like this</Text>
         <Toggle />

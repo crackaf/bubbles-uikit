@@ -42,7 +42,7 @@ const BottomDrawer: React.FC<BottomDrawerProps> = ({ content, isOpen, setIsOpen 
             {content}
           </DrawerContainer>
         </>,
-        portalRoot ?? document.body
+        portalRoot ?? document.body,
       )}
     </>
   );

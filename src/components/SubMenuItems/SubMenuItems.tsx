@@ -28,7 +28,7 @@ const SubMenuItems: React.FC<SubMenuItemsProps> = ({ items = [], activeItem, isM
                 {label}
               </MenuItem>
             </Box>
-          )
+          ),
       )}
     </StyledSubMenuItems>
   );

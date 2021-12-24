@@ -20,7 +20,11 @@ const getPadding = (scale: Scales, hasIcon: boolean) => {
   }
 };
 
-const StyledInputGroup = styled(Box)<{ scale: Scales; hasStartIcon: boolean; hasEndIcon: boolean }>`
+const StyledInputGroup = styled(Box)<{
+  scale: Scales;
+  hasStartIcon: boolean;
+  hasEndIcon: boolean;
+}>`
   ${Input} {
     padding-left: ${({ hasStartIcon, scale }) => getPadding(scale, hasStartIcon)};
     padding-right: ${({ hasEndIcon, scale }) => getPadding(scale, hasEndIcon)};

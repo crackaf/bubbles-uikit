@@ -13,7 +13,11 @@ interface Props {
   onDismiss: () => void;
 }
 
-const WalletButton = styled(Button).attrs({ width: "100%", variant: "text", py: "16px" })`
+const WalletButton = styled(Button).attrs({
+  width: "100%",
+  variant: "text",
+  py: "16px",
+})`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -43,7 +47,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss }) => {
     <WalletButton
       variant="tertiary"
       onClick={() => {
-        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) /*&& !window.MSStream*/;
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent); /*&& !window.MSStream*/
 
         // Since iOS does not support Trust Wallet we fall back to WalletConnect
         if (walletConfig.title === "Trust Wallet" && isIOS) {

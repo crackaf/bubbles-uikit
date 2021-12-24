@@ -57,7 +57,10 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
 
   useEffect(() => {
     if (setMenuOpenByIndex && index !== undefined) {
-      setMenuOpenByIndex((prevValue) => ({ ...prevValue, [index]: isMenuShow }));
+      setMenuOpenByIndex((prevValue) => ({
+        ...prevValue,
+        [index]: isMenuShow,
+      }));
     }
   }, [isMenuShow, setMenuOpenByIndex, index]);
 
@@ -67,7 +70,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
     },
     () => {
       setIsOpen(false);
-    }
+    },
   );
 
   return (

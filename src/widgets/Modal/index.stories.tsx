@@ -119,11 +119,11 @@ export const ReactingToOusideChanges: React.FC = () => {
     <ReactiveModal title={`[${counter}] Modal that reacts to outside change`} count={counter} />,
     true,
     true,
-    "reactiveModal"
+    "reactiveModal",
   );
 
   const [onPresent2] = useModal(
-    <ReactiveModal title={`[${counter}] Modal that does NOT react to outside change`} count={counter} />
+    <ReactiveModal title={`[${counter}] Modal that does NOT react to outside change`} count={counter} />,
   );
   return (
     <div>

@@ -36,7 +36,10 @@ const mediaQueries: MediaQueries = (() => {
     // Min width for next iteration
     prevMinWidth = breakpoint + 1;
 
-    return { ...accum, [size]: `(min-width: ${minWidth}px) and (max-width: ${breakpoint}px)` };
+    return {
+      ...accum,
+      [size]: `(min-width: ${minWidth}px) and (max-width: ${breakpoint}px)`,
+    };
   }, {});
 })();
 
