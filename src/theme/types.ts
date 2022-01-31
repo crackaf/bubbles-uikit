@@ -37,6 +37,16 @@ export type Gradients = {
   violet: string;
   violetAlt: string;
   gold: string;
+
+  // Adding new Gradients here from figma @Arbab
+  gradient1: string;
+  gradient2: string;
+  gradient3: string;
+  gradient4: string;
+  gradient5: string;
+  gradient6: string;
+  gradient7: string;
+  gradient8: string;
 };
 
 export type Colors = {
@@ -49,6 +59,7 @@ export type Colors = {
   failure: string;
   warning: string;
   cardBorder: string;
+  cardShadow: string;
   contrast: string;
   dropdown: string;
   dropdownDeep: string;
@@ -60,7 +71,10 @@ export type Colors = {
   backgroundAlt: string;
   backgroundAlt2: string;
   text: string;
+  textHeading: string;
+  textSecondary: string;
   textDisabled: string;
+  textInfo: string;
   textSubtle: string;
   disabled: string;
 
