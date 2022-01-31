@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Text from "../Text/Text";
+import getThemeValue from "../../util/getThemeValue";
 import { tags, scales, HeadingProps } from "./types";
 
 const style = {

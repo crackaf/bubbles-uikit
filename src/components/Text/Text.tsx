@@ -27,6 +27,12 @@ const Text = styled.div<TextProps>`
     overflow: hidden;
     text-overflow: ellipsis;`}
 
+  background: ${({ background }) => background ?? getColor};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  height: fit-content;
+
   ${space}
   ${typography}
   ${layout}
