@@ -49,7 +49,6 @@ export type Gradients = {
   gradient8: string;
 };
 
-
 export type Colors = {
   primary: string;
   primaryBright: string;
