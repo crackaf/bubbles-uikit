@@ -146,6 +146,12 @@ export type Colors = {
   gold: string;
   silver: string;
   bronze: string;
+
+  // Transparent Colors
+  transparentColors: TransparentColors;
+
+  // Basic Colors
+  basicColors: BasicColors;
 };
 
 export type ZIndices = {

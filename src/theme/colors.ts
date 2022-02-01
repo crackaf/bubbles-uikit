@@ -19,51 +19,7 @@ export const additionalColors = {
   bronze: "#E7974D",
 };
 
-export const lightColors: Colors = {
-  ...baseColors,
-  ...additionalColors,
-  background: "#FAF9FA",
-  backgroundDisabled: "#E9EAEB",
-  backgroundAlt: "#FFFFFF",
-  backgroundAlt2: "rgba(255, 255, 255, 0.7)",
-  cardBorder: "#E7E3EB",
-  cardShadow: "rgb(136 141 170 / 30%)",
-  contrast: "#191326",
-  dropdown: "#F6F6F6",
-  dropdownDeep: "#EEEEEE",
-  invertedContrast: "#FFFFFF",
-  input: "#eeeaf4",
-  inputSecondary: "#d7caec",
-  tertiary: "#EFF4F5",
-  text: "#280D5F",
-  textSecondary: "#280D5F",
-  textHeading: "linear-gradient(91.26deg, #A9CDFF 0%, #72F6D1 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%)",
-  textDisabled: "#BDC2C4",
-  textSubtle: "#7A6EAA",
-  textInfo: "#5F97FF",
-  disabled: "#E9EAEB",
-  gradients: {
-    bubblegum: "linear-gradient(139.73deg, #E5FDFF 0%, #F3EFFF 100%)",
-    inverseBubblegum: "linear-gradient(139.73deg, #F3EFFF 0%, #E5FDFF 100%)",
-    cardHeader: "linear-gradient(111.68deg, #F2ECF2 0%, #E8F2F6 100%)",
-    blue: "linear-gradient(180deg, #A7E8F1 0%, #94E1F2 100%)",
-    violet: "linear-gradient(180deg, #E2C9FB 0%, #CDB8FA 100%)",
-    violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
-    gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
-
-    // Adding new Gradients here from figma @Arbab
-    gradient1: "linear-gradient(91.26deg, #70A2FF 0%, #54F0D1 100%)",
-    gradient2: "linear-gradient(91.26deg, #45F0D1 0%, #76E268 100%)",
-    gradient3: "linear-gradient(91.26deg, #76E268 0%, #FFD505 100%)",
-    gradient4: "linear-gradient(91.26deg, #FFD505 0%, #F44336 100%)",
-    gradient5: "linear-gradient(91.26deg, #70A2FF 0%, #72E5DA 28.65%, #72F6D1 50.52%, #76E268 100%)",
-    gradient6: "linear-gradient(91.26deg, #70A2FF 0%, #F76E64 100%)",
-    gradient7: "linear-gradient(91.26deg, #70A2FF 0%, #72F6D1 21.87%, #76E268 47.92%, #FFD505 72.4%, #F76E64 100%)",
-    gradient8: "linear-gradient(91.26deg, #A9CDFF 0%, #72F6D1 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%)",
-  },
-};
-
-export const basicColors: BasicColors = {
+export const basicColor: BasicColors = {
   red: {
     red1: "#fdeded",
     red2: "#fbdadc",
@@ -114,10 +70,59 @@ export const transparentColor: TransparentColors = {
   transTurquoise: "rgba(69, 240, 209, 0.15)",
 };
 
+export const lightColors: Colors = {
+  ...baseColors,
+  ...additionalColors,
+  basicColors: basicColor,
+  transparentColors: transparentColor,
+  ...transparentColor,
+  background: "#FAF9FA",
+  backgroundDisabled: "#E9EAEB",
+  backgroundAlt: "#FFFFFF",
+  backgroundAlt2: "rgba(255, 255, 255, 0.7)",
+  cardBorder: "#E7E3EB",
+  cardShadow: "rgb(136 141 170 / 30%)",
+  contrast: "#191326",
+  dropdown: "#F6F6F6",
+  dropdownDeep: "#EEEEEE",
+  invertedContrast: "#FFFFFF",
+  input: "#eeeaf4",
+  inputSecondary: "#d7caec",
+  tertiary: "#EFF4F5",
+  text: "#280D5F",
+  textSecondary: "#280D5F",
+  textHeading: "linear-gradient(91.26deg, #A9CDFF 0%, #72F6D1 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%)",
+  textDisabled: "#BDC2C4",
+  textSubtle: "#7A6EAA",
+  textInfo: "#5F97FF",
+  disabled: "#E9EAEB",
+  gradients: {
+    bubblegum: "linear-gradient(139.73deg, #E5FDFF 0%, #F3EFFF 100%)",
+    inverseBubblegum: "linear-gradient(139.73deg, #F3EFFF 0%, #E5FDFF 100%)",
+    cardHeader: "linear-gradient(111.68deg, #F2ECF2 0%, #E8F2F6 100%)",
+    blue: "linear-gradient(180deg, #A7E8F1 0%, #94E1F2 100%)",
+    violet: "linear-gradient(180deg, #E2C9FB 0%, #CDB8FA 100%)",
+    violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
+    gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
+
+    // Adding new Gradients here from figma @Arbab
+    gradient1: "linear-gradient(91.26deg, #70A2FF 0%, #54F0D1 100%)",
+    gradient2: "linear-gradient(91.26deg, #45F0D1 0%, #76E268 100%)",
+    gradient3: "linear-gradient(91.26deg, #76E268 0%, #FFD505 100%)",
+    gradient4: "linear-gradient(91.26deg, #FFD505 0%, #F44336 100%)",
+    gradient5: "linear-gradient(91.26deg, #70A2FF 0%, #72E5DA 28.65%, #72F6D1 50.52%, #76E268 100%)",
+    gradient6: "linear-gradient(91.26deg, #70A2FF 0%, #F76E64 100%)",
+    gradient7: "linear-gradient(91.26deg, #70A2FF 0%, #72F6D1 21.87%, #76E268 47.92%, #FFD505 72.4%, #F76E64 100%)",
+    gradient8: "linear-gradient(91.26deg, #A9CDFF 0%, #72F6D1 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%)",
+  },
+};
+
 // Adding Color Changes in darkColors only @Arbab
 export const darkColors: Colors = {
   ...baseColors,
   ...additionalColors,
+  basicColors: basicColor,
+  transparentColors: transparentColor,
   secondary: "linear-gradient(91.26deg, #A9CDFF 0%, #72F6D1 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%)",
   background: "#17171A", // Gray 24
   backgroundDisabled: "#3c3742",

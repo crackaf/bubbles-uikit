@@ -1,6 +1,6 @@
 {
   "name": "bubbles-uikit",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "version-pancakeswapUI": "0.61.0",
   "description": "Set of UI components for bubbles projects",
   "main": "dist/index.cjs.js",
