@@ -49,6 +49,65 @@ export type Gradients = {
   gradient8: string;
 };
 
+export type Blue = {
+  blue1: string;
+  blue2: string;
+  blue3: string;
+  blue4: string;
+  blue5: string;
+  blue6: string;
+  blue7: string;
+  blue8: string;
+};
+
+export type Red = {
+  red1: string;
+  red2: string;
+  red3: string;
+  red4: string;
+  red5: string;
+  red6: string;
+  red7: string;
+  red8: string;
+};
+
+export type Green = {
+  green1: string;
+  green2: string;
+  green3: string;
+  green4: string;
+  green5: string;
+  green6: string;
+  green7: string;
+  green8: string;
+};
+
+export type Yellow = {
+  yellow1: string;
+  yellow2: string;
+  yellow3: string;
+  yellow4: string;
+  yellow5: string;
+  yellow6: string;
+  yellow7: string;
+  yellow8: string;
+};
+
+export type BasicColors = {
+  red: Red;
+  blue: Blue;
+  green: Green;
+  yellow: Yellow;
+};
+
+export type TransparentColors = {
+  transRed: string;
+  transBlue: string;
+  transGreen: string;
+  transYellow: string;
+  transTurquoise: string;
+};
+
 export type Colors = {
   primary: string;
   primaryBright: string;

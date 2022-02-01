@@ -1,4 +1,4 @@
-import { Colors } from "./types";
+import { BasicColors, Colors, TransparentColors } from "./types";
 
 // Updated Colors here @Arbab
 export const baseColors = {
@@ -61,6 +61,57 @@ export const lightColors: Colors = {
     gradient7: "linear-gradient(91.26deg, #70A2FF 0%, #72F6D1 21.87%, #76E268 47.92%, #FFD505 72.4%, #F76E64 100%)",
     gradient8: "linear-gradient(91.26deg, #A9CDFF 0%, #72F6D1 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%)",
   },
+};
+
+export const basicColors: BasicColors = {
+  red: {
+    red1: "#fdeded",
+    red2: "#fbdadc",
+    red3: "#f5a3a7",
+    red4: "#ef6b72",
+    red5: "#ea3943",
+    red6: "#e8212b",
+    red7: "#cb151e",
+    red8: "#941016",
+  },
+  blue: {
+    blue1: "#E2F0FF",
+    blue2: "#C5DFFF",
+    blue3: "#A9CDFF",
+    blue4: "#93BDFF",
+    blue5: "#5f97ff",
+    blue6: "#517DDB",
+    blue7: "#385BB7",
+    blue8: "#233E93",
+  },
+  green: {
+    green1: "#EEFDE2",
+    green2: "#D8FCC5",
+    green3: "#BCF6A6",
+    green4: "#A0ED8D",
+    green5: "#76E268",
+    green6: "#50C24C",
+    green7: "#34A239",
+    green8: "#21832D",
+  },
+  yellow: {
+    yellow1: "#fefae5",
+    yellow2: "#fef4c6",
+    yellow3: "#fee793",
+    yellow4: "#fed861",
+    yellow5: "#fec62d",
+    yellow6: "#daa320",
+    yellow7: "#b68316",
+    yellow8: "#93640e",
+  },
+};
+
+export const transparentColor: TransparentColors = {
+  transRed: "rgba(234, 57, 67, 0.15)",
+  transBlue: "rgba(95, 151, 255, 0.15)",
+  transGreen: "rgba(118, 226, 104, 0.15)",
+  transYellow: "rgba(255, 213, 5, 0.15)",
+  transTurquoise: "rgba(69, 240, 209, 0.15)",
 };
 
 // Adding Color Changes in darkColors only @Arbab
