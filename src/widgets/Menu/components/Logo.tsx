@@ -2,12 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import Flex from "../../../components/Box/Flex";
-import { LogoIcon, LogoWithTextIcon } from "../../../components/Svg";
+import { darkColors } from "../../../theme/colors";
+// import { LogoIcon, LogoWithTextIcon } from "../../../components/Svg";
 
 interface Props {
   isDark: boolean;
   href: string;
 }
+
+const LogoText = styled.div`
+  width: fit-content;
+  font-weight: 800px;
+  font-size: 30px;
+  color: ${darkColors.textSubtle};
+`;
 
 const blink = keyframes`
   0%,  100% { transform: scaleY(1); } 
@@ -46,22 +54,24 @@ const StyledLink = styled(Link)`
 
 const Logo: React.FC<Props> = ({ isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
-  const innerLogo = (
-    <>
-      <LogoIcon className="mobile-icon" />
-      <LogoWithTextIcon className="desktop-icon" isDark={isDark} />
-    </>
-  );
+  // const innerLogo = (
+  //   <>
+  //     <LogoIcon className="mobile-icon" />
+  //     <LogoWithTextIcon className="desktop-icon" isDark={isDark} />
+  //   </>
+  // );
 
   return (
     <Flex>
       {isAbsoluteUrl ? (
-        <StyledLink as="a" href={href} aria-label="Pancake home page">
-          {innerLogo}
+        <StyledLink as="a" href={href} aria-label="Bubbles home page">
+          {/* {innerLogo} */}
+          <LogoText>BUBBLES</LogoText>
         </StyledLink>
       ) : (
-        <StyledLink to={href} aria-label="Pancake home page">
-          {innerLogo}
+        <StyledLink to={href} aria-label="Bubbles home page">
+          {/* {innerLogo} */}
+          <LogoText>BUBBLES</LogoText>
         </StyledLink>
       )}
     </Flex>

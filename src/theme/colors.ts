@@ -2,7 +2,7 @@ import { BasicColors, Colors, TransparentColors } from "./types";
 
 // Updated Colors here @Arbab
 export const baseColors = {
-  failure: "#ED4B9E",
+  failure: "#ea3943",
   primary: "#FEBF32",
   primaryBright: "#53DEE9",
   primaryDark: "#0098A1",

@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { baseColors, darkColors, lightColors } from "../../theme/colors";
 import { Flex, Box } from "../Box";
 import { Link } from "../Link";
@@ -19,6 +20,13 @@ import { LogoWithTextIcon, ArrowForwardIcon } from "../Svg";
 import { Button } from "../Button";
 import { Colors } from "../..";
 
+const LogoText = styled.div`
+  width: fit-content;
+  font-weight: 800px;
+  font-size: 30px;
+  color: ${darkColors.textSubtle};
+`;
+
 const MenuItem: React.FC<FooterProps> = ({
   items,
   isDark,
@@ -26,15 +34,16 @@ const MenuItem: React.FC<FooterProps> = ({
   currentLang,
   langs,
   setLang,
-  cakePriceUsd,
-  buyCakeLabel,
+  bubblePriceUsd,
+  buyBubbleLabel,
   ...props
 }) => {
   return (
     <StyledFooter p={["40px 16px", null, "56px 40px 32px 40px"]} {...props} justifyContent="center">
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <StyledIconMobileContainer display={["block", null, "none"]}>
-          <LogoWithTextIcon isDark width="130px" />
+          {/* <LogoWithTextIcon isDark width="130px" /> */}
+          <LogoText>BUBBLES</LogoText>
         </StyledIconMobileContainer>
         <Flex
           order={[2, null, 1]}
@@ -66,7 +75,8 @@ const MenuItem: React.FC<FooterProps> = ({
             </StyledList>
           ))}
           <Box display={["none", null, "block"]}>
-            <LogoWithTextIcon isDark width="160px" />
+            {/* <LogoWithTextIcon isDark width="160px" /> */}
+            <LogoText>BUBBLES</LogoText>
           </Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
@@ -87,7 +97,7 @@ const MenuItem: React.FC<FooterProps> = ({
           </Flex>
           <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
             <Box mr="20px">
-              <CakePrice cakePriceUsd={cakePriceUsd} color={darkColors.textSubtle as keyof Colors} />
+              <CakePrice cakePriceUsd={bubblePriceUsd} color={darkColors.textSubtle as keyof Colors} />
             </Box>
             <Button
               as="a"
@@ -96,7 +106,7 @@ const MenuItem: React.FC<FooterProps> = ({
               scale="sm"
               endIcon={<ArrowForwardIcon color={lightColors.backgroundAlt} />}
             >
-              {buyCakeLabel}
+              {buyBubbleLabel}
             </Button>
           </Flex>
         </StyledToolsContainer>

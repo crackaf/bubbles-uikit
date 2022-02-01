@@ -90,7 +90,7 @@ const defaultProps = {
   globalMenu: <GlobalMenuComponent />,
   activeItem: "/swap",
   activeSubItem: "https://exchange.pancakeswap.finance",
-  buyCakeLabel: "Buy CAKE",
+  buyCakeLabel: "Buy Bubble",
 };
 
 const ConnectedTemplate: React.FC<NavProps> = (args) => {

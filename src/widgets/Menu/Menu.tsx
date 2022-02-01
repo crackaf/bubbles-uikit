@@ -176,8 +176,8 @@ const Menu: React.FC<NavProps> = ({
             langs={langs}
             setLang={setLang}
             currentLang={currentLang}
-            cakePriceUsd={cakePriceUsd}
-            buyCakeLabel={buyCakeLabel}
+            bubblePriceUsd={cakePriceUsd}
+            buyBubbleLabel={buyCakeLabel}
             mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
           />
         </Inner>
