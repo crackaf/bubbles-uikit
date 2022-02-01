@@ -1,4 +1,5 @@
 import React from "react";
+import { darkColors } from "../../theme/colors";
 import Heading from "./Heading";
 
 export default {
@@ -14,7 +15,9 @@ export const Sizes: React.FC = () => {
       <Heading scale="md">Size md</Heading>
       <Heading scale="lg">Size lg</Heading>
       <Heading scale="xl">Size xl</Heading>
-      <Heading scale="xxl">Size xxl</Heading>
+      <Heading scale="xxl" background={darkColors.textHeading}>
+        Size xxl
+      </Heading>
     </div>
   );
 };

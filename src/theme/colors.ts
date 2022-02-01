@@ -68,12 +68,12 @@ export const darkColors: Colors = {
   ...baseColors,
   ...additionalColors,
   secondary: "linear-gradient(91.26deg, #A9CDFF 0%, #72F6D1 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%)",
-  background: "#17171A",
+  background: "#17171A", // Gray 24
   backgroundDisabled: "#3c3742",
   backgroundAlt: "#27262c",
   backgroundAlt2: "rgba(39, 38, 44, 0.7)",
   // Updated @Arbab
-  cardBorder: "#888daa", // Updated @Arbab
+  cardBorder: "#888daa",
   cardShadow: "rgb(136 141 170 / 30%)",
   //
   contrast: "#FFFFFF",
@@ -85,15 +85,15 @@ export const darkColors: Colors = {
   primaryDark: "#0098A1",
   tertiary: "#353547",
 
-  // Added new text colors @Arbab
+  // Added new text colors (or updated) colors @Arbab
   text: "#FFFFFF",
   textHeading: "linear-gradient(91.26deg, #A9CDFF 0%, #72F6D1 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%)",
   textSecondary: "#000000",
-  textDisabled: "#222531",
+  textDisabled: "#4c516b", // Gray 18
   textInfo: "#5F97FF",
   textSubtle: "#ABAFC4",
+  disabled: "#222531", // Gray 23
   //
-  disabled: "#524B63",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
     inverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
