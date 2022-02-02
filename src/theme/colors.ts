@@ -1,4 +1,4 @@
-import { BasicColors, Colors, TransparentColors } from "./types";
+import { BasicColors, Colors, TransparentColors, Neutral } from "./types";
 
 // Updated Colors here @Arbab
 export const baseColors = {
@@ -17,6 +17,22 @@ export const additionalColors = {
   gold: "#FFC700",
   silver: "#B2B2B2",
   bronze: "#E7974D",
+};
+
+export const netural: Neutral = {
+  gray12: "#888daa",
+  gray13: "#7c81a2",
+  gray14: "#707699",
+  gray15: "#666c8f",
+  gray16: "#5d6383",
+  gray17: "#555a77",
+  gray18: "#4c516b",
+  gray19: "#44485f",
+  gray20: "#3b3f54",
+  gray21: "#323546",
+  gray22: "#2a2d3c",
+  gray23: "#222531",
+  gray24: "#17171a",
 };
 
 export const basicColor: BasicColors = {
@@ -75,7 +91,7 @@ export const lightColors: Colors = {
   ...additionalColors,
   basicColors: basicColor,
   transparentColors: transparentColor,
-  ...transparentColor,
+  neutralColors: netural,
   background: "#FAF9FA",
   backgroundDisabled: "#E9EAEB",
   backgroundAlt: "#FFFFFF",
@@ -123,6 +139,7 @@ export const darkColors: Colors = {
   ...additionalColors,
   basicColors: basicColor,
   transparentColors: transparentColor,
+  neutralColors: netural,
   secondary: "linear-gradient(91.26deg, #A9CDFF 0%, #72F6D1 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%)",
   background: "#17171A", // Gray 24
   backgroundDisabled: "#3c3742",

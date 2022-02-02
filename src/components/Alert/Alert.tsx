@@ -13,10 +13,29 @@ import { AlertProps, variants } from "./types";
 interface ThemedIconLabel {
   variant: AlertProps["variant"];
   theme: DefaultTheme;
-  hasDescription: boolean;
+  hasDescription?: boolean;
+}
+
+interface ThemedAlert {
+  variant: AlertProps["variant"];
+  theme: DefaultTheme;
 }
 
 const getThemeColor = ({ theme, variant = variants.INFO }: ThemedIconLabel) => {
+  switch (variant) {
+    case variants.DANGER:
+      return theme.colors.transparentColors.transRed;
+    case variants.WARNING:
+      return theme.colors.transparentColors.transYellow;
+    case variants.SUCCESS:
+      return theme.colors.transparentColors.transGreen;
+    case variants.INFO:
+    default:
+      return theme.colors.transparentColors.transBlue;
+  }
+};
+
+const getIconColor = ({ theme, variant = variants.INFO }: ThemedIconLabel) => {
   switch (variant) {
     case variants.DANGER:
       return theme.colors.failure;
@@ -45,9 +64,10 @@ const getIcon = (variant: AlertProps["variant"] = variants.INFO) => {
 };
 
 const IconLabel = styled.div<ThemedIconLabel>`
-  background-color: ${getThemeColor};
-  border-radius: 16px 0 0 16px;
-  color: ${({ theme }) => theme.alert.background};
+  /* background-color: ${getThemeColor}; */
+  border-radius: 10px 0 0 10px;
+  color: ${getIconColor};
+  /* color: ${({ theme }) => theme.alert.background}; */
   padding: 12px;
 `;
 
@@ -55,7 +75,7 @@ const withHandlerSpacing = 32 + 12 + 8; // button size + inner spacing + handler
 const Details = styled.div<{ hasHandler: boolean }>`
   flex: 1;
   padding-bottom: 12px;
-  padding-left: 12px;
+  padding-left: 0px;
   padding-right: ${({ hasHandler }) => (hasHandler ? `${withHandlerSpacing}px` : "12px")};
   padding-top: 12px;
 `;
@@ -67,10 +87,11 @@ const CloseHandler = styled.div`
   top: 8px;
 `;
 
-const StyledAlert = styled(Flex)`
+const StyledAlert = styled(Flex)<ThemedAlert>`
   position: relative;
-  background-color: ${({ theme }) => theme.alert.background};
-  border-radius: 16px;
+  background-color: ${getThemeColor};
+  /* background-color: ${({ theme }) => theme.alert.background}; */
+  border-radius: 10px;
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
 `;
 
@@ -78,13 +99,21 @@ const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
   const Icon = getIcon(variant);
 
   return (
-    <StyledAlert>
+    <StyledAlert variant={variant}>
       <IconLabel variant={variant} hasDescription={!!children}>
         <Icon color="currentColor" width="24px" />
       </IconLabel>
       <Details hasHandler={!!onClick}>
-        <Text bold>{title}</Text>
-        {typeof children === "string" ? <Text as="p">{children}</Text> : children}
+        <Text bold color="white">
+          {title}
+        </Text>
+        {typeof children === "string" ? (
+          <Text as="p" color="white">
+            {children}
+          </Text>
+        ) : (
+          children
+        )}
       </Details>
       {onClick && (
         <CloseHandler>

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { PancakeRoundIcon } from "../Svg";
 import Text from "../Text/Text";
 import Skeleton from "../Skeleton/Skeleton";
 import { Colors } from "../../theme";

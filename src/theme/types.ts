@@ -49,6 +49,22 @@ export type Gradients = {
   gradient8: string;
 };
 
+export type Neutral = {
+  gray12: string;
+  gray13: string;
+  gray14: string;
+  gray15: string;
+  gray16: string;
+  gray17: string;
+  gray18: string;
+  gray19: string;
+  gray20: string;
+  gray21: string;
+  gray22: string;
+  gray23: string;
+  gray24: string;
+};
+
 export type Blue = {
   blue1: string;
   blue2: string;
@@ -152,6 +168,9 @@ export type Colors = {
 
   // Basic Colors
   basicColors: BasicColors;
+
+  // Neutral Colors
+  neutralColors: Neutral;
 };
 
 export type ZIndices = {
