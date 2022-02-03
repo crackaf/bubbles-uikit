@@ -12,7 +12,7 @@ const getTextColor = ({
   $isActive: boolean;
 }) => {
   if (disabled) return theme.colors.textDisabled;
-  if ($isActive) return theme.colors.secondary;
+  if ($isActive) return theme.colors.text;
 
   return theme.colors.textSubtle;
 };
